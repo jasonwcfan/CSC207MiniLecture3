@@ -18,24 +18,21 @@ public class GameExample {
         //if you bother Colin enough, he will show you an implementation of that.
         //SOLUTION TO PROBLEM 1:  Now you only have to change the question on this one line
         //instead of each once for each answer before
-        Question twoPlusTwoQuestion = new Question("What is 2+2?");
-        twoPlusTwoQuestion.addAnswer("4");
-        twoPlusTwoQuestion.addAnswer("four");
-        twoPlusTwoQuestion.addAnswer("a number");
-        questions.add(twoPlusTwoQuestion);
-        Question favoriteColorQuestion = new Question("What is Colin's favorite color?");
-        favoriteColorQuestion.addAnswer("blue");
-        questions.add(favoriteColorQuestion);
-        Question swallowQuestion = new Question("What is the air speed velocity of an unladen swallow?");
-        swallowQuestion.addAnswer("african or european?");
-        swallowQuestion.addAnswer("african or european");
-        swallowQuestion.addAnswer("what do you mean? is it an african or european swallow?");
-        questions.add(swallowQuestion);
-        Question towelQuestion = new Question("What gets wetter as it dries?");
-        towelQuestion.addAnswer("towel");
-        towelQuestion.addAnswer("towels");
-        towelQuestion.addAnswer("a towel");
-        questions.add(towelQuestion);
+        questions.add(new QuestionBuilder("What is 2+2?")
+        .addAnswer("4")
+        .addAnswer("four")
+        .addAnswer("a number")
+        .build());
+        questions.add(new QuestionBuilder("What is Colin's favorite color?")
+        .addAnswer("blue"));
+        questions.add(new QuestionBuilder("What is the air speed velocity of an unladen swallow?")
+        .addAnswer("african or european?");
+        .addAnswer("african or european");
+        .addAnswer("what do you mean? is it an african or european swallow?"));
+        questions.add(new QuestionBuilder("What gets wetter as it dries?")
+        .addAnswer("towel");
+        .addAnswer("towels");
+        .addAnswer("a towel"));
     }
 
     private void promptForInput() {

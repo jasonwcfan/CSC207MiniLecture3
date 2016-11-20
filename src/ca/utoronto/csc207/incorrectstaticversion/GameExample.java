@@ -57,7 +57,6 @@ public class GameExample {
                 while(!correctAnswer) {
                     System.out.print(questionAnswerPairs.getKey());
                     System.out.print(" ");
-                    long timeBefore = System.currentTimeMillis();
                     String answer = br.readLine();
                     //PROBLEM 2: If you look at this line with no context, what does it do?
                     //it isn't very obvious
